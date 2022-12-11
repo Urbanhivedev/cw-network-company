@@ -264,7 +264,7 @@ p {
   z-index: 999;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(../images/icon/preloader.svg);
+  /*background-image: url(../images/icon/preloader.svg);*/
 }
 
 .preloader-close {
@@ -435,7 +435,7 @@ p {
 }
 .veegil-hero-area.veegil-hero-4-area {
   background: #f9f9f9;
-  background-image: url(../images/hero-shape-1.png);
+  /*background-image: url(../images/hero-shape-1.png);*/
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 6% 100%;
@@ -443,7 +443,7 @@ p {
   padding-bottom: 60px;
 }
 .veegil-hero-area.veegil-hero-6-area {
-  background-image: url(../images/hero-bg-3.jpg);
+  /*background-image: url(../images/hero-bg-3.jpg);*/
 }
 .veegil-hero-area.veegil-hero-8-area {
   position: relative;
