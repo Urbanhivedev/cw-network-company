@@ -1,0 +1,696 @@
+/*===========================
+    1. COMMON css 
+===========================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #505056;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+  transition: all linear 0.3s;
+}
+
+h1,
+h2,
+h5,
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+
+h5 {
+  font-size: 18px;
+}
+
+ul,
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #505056;
+  margin: 0px;
+}
+/*===== All Button Style =====*/
+.main-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #2b70fa;
+  padding: 0 30px;
+  font-size: 15px;
+  line-height: 45px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  background-color: #2b70fa;
+}
+.main-btn:hover {
+  background-color: #fff;
+  color: #2b70fa;
+  border-color: #2b70fa;
+}
+.main-btn.main-btn-2 {
+  background-color: #fff;
+  color: #2b70fa;
+  border-color: #2b70fa;
+}
+.main-btn.main-btn-2:hover {
+  background-color: #2b70fa;
+  border-color: #2b70fa;
+  color: #fff;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+  display: none;
+}
+.back-to-top a {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #2b70fa;
+  border-radius: 6px;
+  color: #fff;
+}
+.back-to-top.back-to-top-2 a {
+  background: #ff3e66;
+}
+.back-to-top.back-to-top-3 a {
+  background: #ff6b58;
+}
+.back-to-top.back-to-top-6 a {
+  background: #9b2cfa;
+}
+.back-to-top.back-to-top-5 a {
+  background: #801f82;
+}
+.back-to-top.back-to-top-8 a {
+  background: #db0f30;
+}
+
+.off_canvars_overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  cursor: crosshair;
+  background: #232323;
+  top: 0;
+  transition: all linear 0.3s;
+}
+.off_canvars_overlay.active {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+.offcanvas_menu {
+  display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .offcanvas_menu {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .offcanvas_menu {
+    display: block;
+  }
+}
+
+.offcanvas_menu_wrapper {
+  width: 290px;
+  position: fixed;
+  background: #fff;
+  z-index: 9999;
+  top: 0;
+  height: 100%;
+  transition: 0.5s;
+  left: 0;
+  margin-left: -300px;
+  padding: 50px 15px 30px;
+  overflow-y: visible;
+}
+.offcanvas_menu_wrapper.active {
+  margin-left: 0;
+}
+
+
+.offcanvas_menu_wrapper.active .canvas_close {
+  opacity: 1;
+  visibility: visible;
+}
+
+.canvas_close {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.3s;
+}
+.canvas_close a {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #2b70fa;
+  border-radius: 10px;
+  background: #2b70fa;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.canvas_close a:hover {
+  background: #2b70fa;
+  border-color: #2b70fa;
+  color: #fff;
+}
+
+.canvas_open a {
+  font-size: 26px;
+  width: 50px;
+  height: 42px;
+  display: block;
+  line-height: 39px;
+  text-align: center;
+  border: 1px solid #232323;
+  color: #222;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.canvas_open a:hover {
+  color: #2b70fa;
+  border-color: #2b70fa;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #0e1133;
+}
+
+.preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon/preloader.svg);
+}
+
+.preloader-close {
+  position: fixed;
+  z-index: 999999;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  right: 40px;
+  bottom: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  background: #2b70fa;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.loader-wrap {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+.loader-wrap .layer-one {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-wrap .layer-two {
+  position: absolute;
+  left: 33.3333%;
+  top: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-wrap .layer-three {
+  position: absolute;
+  left: 66.6666%;
+  top: 0;
+  width: 33.3333%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-wrap .layer .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4f9ff;
+}
+
+/*===========================
+    2.HEADER css 
+===========================*/
+.veegil-header-area {
+  padding-top: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.veegil-header-area.veegil-header-2-area .veegil-btn-box .main-btn {
+  background: #ff3e66;
+  border-radius: 30px;
+  border-color: #ff3e66;
+}
+.veegil-header-area.veegil-header-2-area .veegil-btn-box .main-btn:hover {
+  background: transparent;
+  color: #ff3e66;
+}
+.veegil-header-area.veegil-header-3-area.veegil-sticky.sticky {
+  background: #0e1133;
+}
+.veegil-header-area.veegil-header-4-area.veegil-sticky.sticky {
+  background: linear-gradient(90deg, #6b1fcd 0%, #374ede 100%);
+}
+.veegil-header-area.veegil-header-page-area.veegil-sticky.sticky {
+  background: #0a44b9;
+}
+.veegil-header-area.veegil-header-7-area.veegil-sticky.sticky {
+  background: #290645;
+}
+.veegil-header-area.veegil-header-error-page {
+  box-shadow: 0px 10px 20px 0px rgba(14, 17, 51, 0.1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-nav-box .veegil-btn-box {
+  position: relative;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-nav-box .veegil-btn-box {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .header-nav-box .veegil-btn-box {
+    padding-right: 30px;
+  }
+}
+.header-nav-box .veegil-btn-box .login-btn {
+  color: #0e1133;
+  font-size: 15px;
+  font-weight: 500;
+}
+.header-nav-box .veegil-btn-box .login-btn i {
+  padding-right: 6px;
+}
+@media (max-width: 767px) {
+  .header-nav-box .veegil-btn-box .main-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .header-nav-box .veegil-btn-box .main-btn {
+    padding: 0 10px;
+    display: inline-block;
+  }
+}
+
+/*===========================
+    3.veegil HERO css 
+===========================*/
+.veegil-hero-area {
+  padding-top: 200px;
+  padding-bottom: 110px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.veegil-hero-area .hero-shape-1 {
+  position: absolute;
+  left: 0;
+  top: 250px;
+  z-index: -1;
+  animation: linear 20s animationFramesOne infinite;
+}
+.veegil-hero-area .hero-shape-2 {
+  position: absolute;
+  left: 80px;
+  z-index: -1;
+  top: 480px;
+  animation: linear 25s animationFramesThree infinite;
+}
+.veegil-hero-area .hero-shape-3 {
+  position: absolute;
+  bottom: 120px;
+  right: 320px;
+  z-index: -1;
+  animation: linear 25s animationFramesFive infinite;
+}
+.veegil-hero-area.veegil-hero-4-area {
+  background: #f9f9f9;
+  background-image: url(../images/hero-shape-1.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 6% 100%;
+  padding-top: 140px;
+  padding-bottom: 60px;
+}
+.veegil-hero-area.veegil-hero-6-area {
+  background-image: url(../images/hero-bg-3.jpg);
+}
+.veegil-hero-area.veegil-hero-8-area {
+  position: relative;
+  z-index: 10;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-1 {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-3 {
+  position: absolute;
+  top: 400px;
+  right: 290px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-4 {
+  position: absolute;
+  bottom: 195px;
+  left: 195px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-5 {
+  position: absolute;
+  bottom: 195px;
+  left: 265px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-6 {
+  position: absolute;
+  top: 139;
+  left: 205px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-7 {
+  position: absolute;
+  top: 170px;
+  right: 990px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-8 {
+  position: absolute;
+  top: 200px;
+  right: 700px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .home-8-shape-9 {
+  position: absolute;
+  top: 270px;
+  right: 990px;
+  z-index: -1;
+}
+.veegil-hero-area.veegil-hero-8-area .veegil-hero-content-8 .veegil-title {
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fb2d4e 25%, #4e88ff 75%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .veegil-hero-area.veegil-hero-8-area .veegil-hero-content-8 .veegil-title {
+    font-size: 56px;
+    line-height: 66px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .veegil-hero-area.veegil-hero-8-area .veegil-hero-content-8 .veegil-title {
+    font-size: 42px;
+    line-height: 66px;
+  }
+}
+@media (max-width: 767px) {
+  .veegil-hero-area.veegil-hero-8-area .veegil-hero-content-8 .veegil-title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+.veegil-hero-thumb-6 .thumb {
+  position: relative;
+  z-index: 10;
+}
+.veegil-hero-thumb-6 .thumb .back-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .veegil-hero-content {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .veegil-hero-content {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+.veegil-hero-content > span {
+  color: #2b70fa;
+  font-size: 14px;
+  font-weight: 500;
+}
+.veegil-hero-content .veegil-title {
+  font-size: 60px;
+  line-height: 70px;
+  margin-top: 10px;
+  margin-bottom: 22px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .veegil-hero-content .veegil-title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .veegil-hero-content .veegil-title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media (max-width: 767px) {
+  .veegil-hero-content .veegil-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .veegil-hero-content .veegil-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+.veegil-hero-content p {
+  font-size: 18px;
+  line-height: 28px;
+}
+@media (max-width: 767px) {
+  .veegil-hero-content p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+.veegil-hero-content ul {
+  margin: 41px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.veegil-hero-content ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+@media (max-width: 767px) {
+  .veegil-hero-content ul li {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .veegil-hero-content ul li {
+    margin-bottom: 0px;
+  }
+}
+.veegil-hero-content ul li a {
+  background: #0e1133;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 23px;
+  border-radius: 6px;
+  border: 2px solid #0e1133;
+}
+.veegil-hero-content ul li a i {
+  padding-right: 6px;
+}
+.veegil-hero-content ul li a:hover {
+  background: transparent;
+  color: #0e1133;
+}
+.veegil-hero-content ul li a.item-2 {
+  background: transparent;
+  color: #0e1133;
+}
+.veegil-hero-content ul li a.item-2:hover {
+  background: #0e1133;
+  color: #fff;
+}
+.veegil-hero-content.veegil-hero-content-4 {
+  padding-right: 40px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .veegil-hero-content.veegil-hero-content-4 {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .veegil-hero-content.veegil-hero-content-4 {
+    padding-right: 0;
+  }
+}
+
+/*===========================
+   FOOTER css 
+===========================*/
+.veegil-footer-area {
+  background: #eef1f6;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.veegil-how-it-work-content .how-it-work-box {
+  position: relative;
+  padding-left: 70px;
+  margin-top: 45px;
+}
+.veegil-how-it-work-content .how-it-work-box span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  background: #eef4ff;
+  color: #2b70fa;
+  font-size: 22px;
+  font-weight: 500;
+}
+.veegil-how-it-work-content .how-it-work-box .title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.veegil-how-it-work-content .how-it-work-box:hover span {
+  background: #2b70fa;
+  box-shadow: 0px 14px 20px 0px rgba(0, 43, 130, 0.3);
+  color: #fff;
+}
+
