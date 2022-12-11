@@ -4,12 +4,7 @@ import Loader from './others/Helper/Loader';
 import ScrollToTop from './others/Helper/ScrollToTop';
 import Home from './pages/Home';
 import './index.css'
-import Home2 from './pages/Home2';
-import Home3 from './pages/Home3';
-import Home4 from './pages/Home4';
-import Home5 from './pages/Home5';
-import Signup from './pages/Signup';
-import Signin from './pages/Signin';
+
 import Jobs from './pages/Jobs';
 import ViewJob from './pages/ViewJobs';
 import AppliedJobs from './pages/AppliedJobs';
