@@ -95,7 +95,7 @@ export default function NestedList() {
         <ListItemIcon style={{color:'white'}}>
            <PeopleAltIcon />
         </ListItemIcon>
-        <ListItemText primary={<Typography type="body2" style={mystyle}>CANDIDATES</Typography>} />
+        <ListItemText primary={<Typography type="body2" style={mystyle}>CONTRACTORS</Typography>} />
         {open ? <ExpandLess onClick={handleClick} /> : <ExpandMore  onClick={handleClick}/>}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>

@@ -131,7 +131,7 @@ export default function CCandidatesHired() {
                               }}
                               // onClick={() => setOpen(true)}
                             >
-                              PHARMACY
+                              PLUMBING
                             </Button>
                           </Grid>
                           {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
@@ -149,7 +149,7 @@ export default function CCandidatesHired() {
                               }}
                               // onClick={() => setOpen(true)}
                             >
-                              SURGRY
+                              FIELD WORK
                             </Button>
                           </Grid>
                         </Grid>

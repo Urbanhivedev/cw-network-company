@@ -193,7 +193,7 @@ export default function CViewCandidates() {
                               }}
                               // onClick={() => setOpen(true)}
                             >
-                              PHARMACY
+                              PLUMBING
                               {/* {cand?.industry} */}
                             </Button>
                           </Grid>
@@ -212,7 +212,7 @@ export default function CViewCandidates() {
                               }}
                               // onClick={() => setOpen(true)}
                             >
-                              SURGRY
+                              FIELD WORK
                             </Button>
                           </Grid>
                         </Grid>

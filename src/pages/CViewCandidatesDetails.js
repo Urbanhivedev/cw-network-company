@@ -89,7 +89,7 @@ export default function CViewCandidatesDetails() {
                     sx={{ pt: 1, pb: 1 }}
                     // onClick={viewJobsFxn}
                   >
-                    PHARMACY
+                    CONSTRUCTION
                   </Button>
                   <br/>
                   <Button
@@ -105,7 +105,7 @@ export default function CViewCandidatesDetails() {
                     sx={{ pt: 1, pb: 1 }}
                     // onClick={viewJobsFxn}
                   >
-                    SURGERY
+                    PLUMBING
                   </Button>
             </Grid>
             </Grid>
